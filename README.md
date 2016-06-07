@@ -1,2 +1,2 @@
-# AlgoProj
-AlgoProj
+# Django Project
+Website
