@@ -11,11 +11,23 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='loginScreen',
+            name='Data',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('data', models.CharField(max_length=200)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='User',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('username', models.CharField(max_length=200)),
                 ('password', models.CharField(max_length=200)),
             ],
+        ),
+        migrations.AddField(
+            model_name='data',
+            name='username',
+            field=models.ForeignKey(to='login.User'),
         ),
     ]

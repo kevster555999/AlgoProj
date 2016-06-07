@@ -1,11 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import User, Data
-
 
 def index(request):
     return HttpResponse("Hello World")
 
-def user(request, username):
-    return HttpResponse("Hello World from: %s." % username)
+def user(request, user):
+    return HttpResponse("Hello World from: %s" % user)
 
