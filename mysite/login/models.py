@@ -14,3 +14,6 @@ class Data(models.Model):
 
     def __str__(self):
     	return self.username.username + ": " + self.data
+
+
+    
