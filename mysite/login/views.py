@@ -16,10 +16,11 @@ def index(request):
 
 	user_list = User.objects.all()
 	my_context = { 'user': user_list }
+
 	return render(request,'index.html',my_context)
 
 def log_in(request):
-    return render(request,'login.html')
+    return render(request,'ind.html')
 
 def analytics(request):
     return render(request,'analytics.html')
